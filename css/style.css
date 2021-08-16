@@ -1,0 +1,334 @@
+/*========================================
+  Font från Google Fonts
+========================================*/
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700"');
+
+
+/*========================================
+  Misc
+========================================*/
+body {
+  background-color: #1c1c1e;
+  text-align: center;
+  font-family: "Open Sans", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #fff;
+  padding: 0;
+  margin: 0 0 100px;
+}
+h2, h3, .delete-message, .login-message, .game-random, input, .textbox {
+  text-shadow: 2px 2px 2px #000000;
+}
+h1 {
+  margin: 0;
+  padding: 0;
+}
+* {
+    box-sizing: border-box;
+}
+html {
+    position: relative;
+    min-height: 100%;
+}
+.game-random img {
+  box-shadow: 0px 3px 7px 0 rgba(0, 0, 0, 0.2), 0px 3px 20px 0 rgba(0, 0, 0, 0.2);
+  margin-top: 1rem;
+  width: 256px;
+  height: 340px;
+}
+table {
+  margin-left: auto;
+  margin-right: auto;
+}
+table td {
+  text-align: left;
+}
+p {
+  margin-top: 2px;
+  margin-bottom: 2px;
+  padding: 0;
+}
+/* justerar så att innehåll hamnar under meny rad */
+.content {
+  padding-top: 60px;
+}
+
+
+/*========================================
+  Game Details
+========================================*/
+#cover {
+  grid-area: cover;
+  justify-self: end;
+}
+.details {
+  grid-area: details;
+  align-self: end;
+  justify-self: start;
+  text-align: left;
+}
+#genres, #developers, #platforms, #releasedate {
+  font-weight: 600;
+  margin: 0;
+  padding: 0;
+}
+#PlatformId {
+    width: 100%;
+    height: 25px;
+}
+.thin-text {
+  font-weight: 100;
+}
+#deck {
+  grid-area: deck;
+  width: 65%;
+  justify-self: center;
+  margin: auto;
+}
+#description {
+  text-align: left;
+  grid-area: desc;
+}
+.game-details {
+  padding-top: 60px;
+  width: 100%;
+  display: grid;
+  grid-gap: 20px;
+  grid-template:
+  "cover details"
+  "deck  deck"
+  "desc  desc";
+}
+  .game-details img {
+    box-shadow: 0px 3px 7px 0 rgba(0, 0, 0, 0.2), 0px 3px 20px 0 rgba(0, 0, 0, 0.2);
+    margin-top: 1rem;
+    width: 256px;
+    height: 340px;
+  }
+
+ul#platforms li {
+  display: inline;
+}
+
+/*========================================
+  Details api laddning
+========================================*/
+.ajax-loader {
+  visibility: hidden;
+  position: absolute;
+  z-index: +100 !important;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.ajax-loader img {
+  position: relative;
+  top: 50%;
+  overflow: hidden;
+}
+
+
+/*========================================
+  Meny rad
+========================================*/
+#navbar {
+  background: #000000;
+  margin-bottom: 20px;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding-bottom: 5px;
+  padding-top: 5px;
+}
+  #navbar a {
+    display: inline-block;
+    text-align: center;
+    padding: 14px;
+  }
+
+
+
+/*========================================
+  Länkar
+========================================*/
+a {
+  color: #fff;
+  text-decoration: none;
+  text-shadow: 2px 2px 2px #000000;
+}
+  a:hover {
+    transition: all 0.5s ease-out;
+    color: #eece1a;
+  }
+
+ul {
+  padding: 0;
+}
+  ul li {
+    display: inline-block;
+    list-style: none;
+  }
+
+/*========================================
+  Index - radar upp innehåll med grid sysyem
+========================================*/
+.items-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+}
+.items-section img:hover {
+  opacity: 0.5;
+  border-color: #eece1a;
+  transition: all 0.5s ease-out;
+}
+.items-section img, .game-info img {
+  box-shadow: 0px 3px 7px 0 rgba(0, 0, 0, 0.2), 0px 3px 20px 0 rgba(0, 0, 0, 0.2);
+  margin-top: 1rem;
+  width: 256px;
+  height: 340px;
+}
+
+/*========================================
+  Footer
+========================================*/
+.footer {
+  background: #000;
+  font-size: 0.9rem;
+  margin-top: 20px;
+  overflow: hidden;
+  display: inline-block;
+  text-align: center;
+  padding: 14px;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 50px;
+}
+
+input {
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  padding: 4px;
+}
+  input:hover {
+    transition: all 0.5s ease-out;
+    color: #eece1a;
+    cursor: pointer;
+  }
+
+.textbox input {
+  width: 350px;
+  text-rendering: auto;
+  color: initial;
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-transform: none;
+  text-indent: 0px;
+  text-shadow: none;
+  display: inline-block;
+  text-align: start;
+  background-color: white;
+  -webkit-rtl-ordering: logical;
+  cursor: text;
+  border-width: 2px;
+  border-style: inset;
+  border-color: initial;
+}
+
+
+/*========================================
+  Upload
+========================================*/
+#files tr:nth-child(odd) {
+    background: #333337;
+}
+#files tr:nth-child(even) {
+
+    background: #686868;
+}
+th {
+    font-weight: 100;
+}
+
+/*========================================
+  Media quarie tablet
+========================================*/
+@media screen and (max-width: 660px) {
+  #navbar a {
+    padding: 10px 0px 10px 5px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 0.9rem;
+  }
+
+  .items-section {
+    grid-template-columns: repeat(auto-fill, minmax(227px, 1fr));
+  }
+  .item a img {
+    width: calc(256px/1.5);
+    height: calc(340px/1.5);
+  }
+
+  .game-details {
+    /* padding-top: 200px; */
+    display: inline;
+    text-shadow: 2px 2px 2px #000000;
+  }
+
+  .details {
+    text-align: center;
+    padding-bottom: 20px;
+  }
+
+  #deck {
+    width: 95%;
+  }
+
+  .content {
+    padding-top: 60px;
+  }
+}
+
+/*========================================
+  Media quarie mobil
+========================================*/
+@media screen and (max-width: 426px) {
+  #navbar a {
+    padding: 5px 0px 5px 0px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 0.85rem;
+  }
+
+  .items-section {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  }
+  .item a img {
+    width: calc(256px/2);
+    height: calc(340px/2);
+  }
+  .game-details {
+    /* padding-top: 200px; */
+    display: inline;
+  }
+
+  .details {
+    text-align: center;
+    padding-bottom: 20px;
+  }
+
+  #deck {
+    width: 95%;
+  }
+
+  .content {
+    padding-top: 60px;
+  }
+}
+
