@@ -4,7 +4,7 @@ $('.details-button').css("visibility", "hidden");
 $('#navbar').css("visibility", "visible");
 $('.ajax-loader').css("visibility", "visible");
 
-let apiKey = 'xxxxxx' //grab a key from the video game website www.giantbomb.com
+let apiKey = 'xxxxxx' //grab a key from the video game website https://www.giantbomb.com/api/
 
 //när dokumented är färdig laddat
 $(document).ready(function () {
